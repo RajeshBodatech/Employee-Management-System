@@ -1,16 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+.form-page { width: min(1020px, calc(100% - 48px)); margin: 0 auto; padding: 27px 0 65px; flex: 1; }
+.form-breadcrumb { display: flex; align-items: center; gap: 10px; margin-bottom: 26px; color: #8b97a2; font-size: 11px; }
+.form-breadcrumb a { color: #6559cf; font-weight: 700; text-decoration: none; }
+.form-breadcrumb a:hover { text-decoration: underline; }
+.form-layout { display: grid; grid-template-columns: minmax(240px, .8fr) minmax(380px, 1.2fr); align-items: stretch; overflow: hidden; border: 1px solid #e7ebf0; border-radius: 15px; background: white; box-shadow: 0 14px 40px #283e540b; }
+.form-aside { position: relative; display: flex; min-height: 500px; overflow: hidden; flex-direction: column; justify-content: center; padding: 48px 38px; color: white; background: linear-gradient(145deg, #263c52, #344f60 70%, #3a665f); }
+.form-aside::before, .form-aside::after { position: absolute; width: 290px; height: 290px; border: 1px solid #ffffff12; border-radius: 50%; content: ''; }
+.form-aside::before { right: -165px; bottom: -110px; }
+.form-aside::after { right: -115px; bottom: -60px; }
+.form-aside .eyebrow { color: #b4d9ce; }
+.form-aside h1 { position: relative; z-index: 1; max-width: 310px; color: white; font-size: clamp(30px, 4vw, 40px); }
+.form-aside > p:not(.eyebrow) { position: relative; z-index: 1; max-width: 280px; margin: 17px 0 0; color: #d0dce1; font-size: 13px; line-height: 1.7; }
+.aside-decoration { position: relative; width: 150px; height: 65px; margin-top: 52px; }
+.aside-decoration span { position: absolute; z-index: 1; left: 49px; display: grid; width: 52px; height: 52px; place-items: center; border: 1px solid #ffffff44; border-radius: 17px; color: #c6f0e2; background: #ffffff12; font-size: 22px; }
+.aside-decoration i { position: absolute; top: 17px; width: 19px; height: 19px; border: 1px solid #ffffff50; border-radius: 50%; background: #5d8a82; }
+.aside-decoration i:nth-of-type(1) { left: 16px; }
+.aside-decoration i:nth-of-type(2) { right: 16px; background: #7471bd; }
+.aside-decoration i:nth-of-type(3) { top: 41px; left: 66px; width: 11px; height: 11px; background: #c4a568; }
+.employee-form-card { padding: 43px clamp(25px, 5vw, 55px); }
+.form-card-heading { margin-bottom: 28px; }
+.form-step { color: #8478de; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+.form-card-heading h2 { margin: 8px 0 5px; color: #253749; font-family: Manrope, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -.035em; }
+.form-card-heading p { margin: 0; color: #8b97a2; font-size: 11px; }
+.form-card-heading p b, .field-label b { color: #dc777c; }
+.employee-form { display: flex; flex-direction: column; }
+.field-label { margin: 0 0 7px; color: #394c5c; font-size: 11px; font-weight: 700; }
+.employee-form input { width: 100%; height: 44px; margin-bottom: 19px; border: 1px solid #e3e8ed; border-radius: 8px; padding: 0 12px; color: #273a4b; background: #fcfdfe; font-size: 12px; transition: border .16s ease, box-shadow .16s ease; }
+.employee-form input::placeholder { color: #aab3bc; }
+.employee-form input:focus { border-color: #9d95ed; outline: 0; box-shadow: 0 0 0 3px #6a5ed91a; }
+.field-hint { margin: -13px 0 21px; color: #99a3ad; font-size: 10px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 7px; padding-top: 18px; border-top: 1px solid #edf0f3; }
+.form-loading { padding: 35px 0; color: #7d8995; font-size: 12px; }
+.employee-form-card .notice { margin: -12px 0 20px; }
 
-.st-ba {
-    background-color: #2B4056;
-    min-height: 90vh;
-}
-
-.card-top {
-    width: 20rem;
-    padding: 1rem;
-    margin-top: 100px;
-}
-
-.title {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@media (max-width: 760px) {
+  .form-page { width: min(100% - 30px, 560px); padding-top: 20px; }
+  .form-layout { grid-template-columns: 1fr; }
+  .form-aside { min-height: 0; padding: 26px 25px 29px; }
+  .form-aside h1 { max-width: 430px; font-size: 29px; }
+  .form-aside > p:not(.eyebrow) { max-width: 430px; margin-top: 9px; }
+  .aside-decoration { position: absolute; right: 20px; bottom: 5px; transform: scale(.7); transform-origin: right bottom; }
+  .employee-form-card { padding: 29px 25px; }
 }
