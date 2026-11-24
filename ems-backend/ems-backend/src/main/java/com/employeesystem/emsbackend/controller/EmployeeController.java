@@ -11,7 +11,9 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(path = "/api/emp")
+// @RequestMapping(path = "/api/emp")
+@RequestMapping(path = "https://employee-management-system-backend-wzgq.onrender.com/api/emp")
+
 @AllArgsConstructor
 public class EmployeeController {
     private final EmployeeService employeeService;
