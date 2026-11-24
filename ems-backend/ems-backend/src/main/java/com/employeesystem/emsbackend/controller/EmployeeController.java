@@ -9,10 +9,20 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin("*")
+@CrossOrigin(
+        origins = "https://employee-management-system-b3lv.onrender.com",
+        methods = {
+                RequestMethod.GET,
+                RequestMethod.POST,
+                RequestMethod.PUT,
+                RequestMethod.DELETE,
+                RequestMethod.OPTIONS
+        },
+        allowedHeaders = "*"
+)
 @RestController
-// @RequestMapping(path = "/api/emp")
-@RequestMapping(path = "https://employee-management-system-backend-wzgq.onrender.com/api/emp")
+@RequestMapping(path = "/api/emp")
+// @RequestMapping(path = "https://employee-management-system-backend-wzgq.onrender.com/api/emp")
 
 @AllArgsConstructor
 public class EmployeeController {
