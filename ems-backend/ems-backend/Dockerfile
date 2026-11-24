@@ -6,4 +6,5 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre
 WORKDIR /app
 COPY --from=build /app/target/ems-backend-0.0.1-SNAPSHOT.jar app.jar
-CMD ["sh", "-c", "java -Dserver.port=${PORT:-10000} -jar app.jar"]
+EXPOSE 10000
+ENTRYPOINT ["sh", "-c", "exec java -Dserver.port=${PORT:-10000} -jar app.jar"]
