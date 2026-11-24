@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //const URL = "http://localhost:8080/api/emp";
-const URL = "https://employee-management-system-backend-wzgq.onrender.com";
+const URL = "https://employee-management-system-backend-wzgq.onrender.com/api/emp";
 
 
 export const listEmployees = () =>  axios.get(URL);
